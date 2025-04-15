@@ -19,4 +19,19 @@ class Note extends Model
     {
         return $this->belongsTo(User::class);
     }
+<<<<<<< HEAD
+=======
+
+    public function sharedWith()
+    {
+        return $this->belongsToMany(User::class, 'note_shares', 'note_id', 'shared_with')
+                    ->withPivot('shared_by')
+                    ->withTimestamps();
+    }
+
+    public function sharedBy()
+    {
+        return $this->belongsTo(User::class, 'shared_by');
+    }
+>>>>>>> 72266bf (corrected errors)
 }
