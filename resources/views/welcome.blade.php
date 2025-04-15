@@ -57,7 +57,7 @@
                 <div class="text-[13px] leading-[20px] flex-1 p-6 pb-12 lg:p-20 bg-white dark:bg-[#161615] dark:text-[#EDEDEC] shadow-[inset_0px_0px_0px_1px_rgba(26,26,0,0.16)] dark:shadow-[inset_0px_0px_0px_1px_#fffaed2d] rounded-bl-lg rounded-br-lg lg:rounded-tl-lg lg:rounded-br-none">
                     <h1 class="mb-1 font-medium">Let's get started</h1>
 <<<<<<< HEAD
-                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Laravel has an incredibly rich ecosystem. <br>We suggest starting with the following.</p>
+                    <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Note_App is Good. <br></p>
 =======
                     <p class="mb-2 text-[#706f6c] dark:text-[#A1A09A]">Note_App Is Here For You <br></p>
 >>>>>>> 72266bf (corrected errors)
@@ -70,9 +70,9 @@
                             </span>
 <<<<<<< HEAD
                             <span>
-                                Read the
+                            Enjoy
                                 <a href="https://laravel.com/docs" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Documentation</span>
+                                    <span>This App</span>
 =======
                             <!-- <span>
                                 Read the
@@ -104,10 +104,7 @@
                             </span>
 <<<<<<< HEAD
                             <span>
-                                Watch video tutorials at
-                                <a href="https://laracasts.com" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
-                                    <span>Laracasts</span>
-=======
+                            =======
                             <!-- <span>
                                 Watch video tutorials at
                                 <a href="https://laracasts.com" target="_blank" class="inline-flex items-center space-x-1 font-medium underline underline-offset-4 text-[#f53003] dark:text-[#FF4433] ml-1">
