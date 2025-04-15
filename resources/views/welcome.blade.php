@@ -5,9 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <<<<<<< HEAD
-        <title>Laravel</title>
+        <title>Note_Apps</title>
 =======
-        <title>Notes_App</title>
 >>>>>>> 72266bf (corrected errors)
 
         <!-- Fonts -->
