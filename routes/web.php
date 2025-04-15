@@ -8,10 +8,6 @@ Route::get('/', function () {
 <<<<<<< HEAD
     return view('auth.login');
 });
-
-=======
-    return view('auth.login');
-});
 >>>>>>> 72266bf (corrected errors)
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', [NoteController::class, 'index'])->name('dashboard');
