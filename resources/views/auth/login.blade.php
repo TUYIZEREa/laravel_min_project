@@ -73,5 +73,4 @@
         </div>
     </form>
 </x-guest-layout>
-
 >>>>>>> 72266bf (corrected errors)
