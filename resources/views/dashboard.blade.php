@@ -1,9 +1,15 @@
 <x-app-layout>
     <x-slot name="header">
         <div class="flex justify-between items-center">
+<<<<<<< HEAD
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
                 {{ __('My Notes') }}
         </h2>
+=======
+            <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
+                {{ __('My Notes') }}
+            </h2>
+>>>>>>> 72266bf (corrected errors)
         </div>
     </x-slot>
 
@@ -69,6 +75,7 @@
             <!-- Notes List -->
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6">
+<<<<<<< HEAD
                     <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">Your Notes</h3>
                     <div class="space-y-4">
                         @forelse($notes as $note)
@@ -85,11 +92,38 @@
                                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                             </svg>
+=======
+                    <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">My Notes</h3>
+                    <div class="space-y-4">
+                        @forelse($notes as $note)
+                            <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow">
+                                <div class="flex justify-between items-start">
+                                    <div>
+                                        <h4 class="text-lg font-medium text-gray-900 dark:text-gray-100">{{ $note->title }}</h4>
+                                        <p class="mt-1 text-gray-600 dark:text-gray-400 whitespace-pre-line">{{ $note->content }}</p>
+                                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-500">Created: {{ $note->created_at->format('M d, Y H:i') }}</p>
+                                    </div>
+                                    <div class="flex space-x-2">
+                                        <button onclick="openShareModal({{ $note->id }})" 
+                                                class="inline-flex items-center px-3 py-1 bg-blue-500 text-white text-sm font-medium rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                                            </svg>
+                                            Share
+                                        </button>
+                                        <a href="{{ route('notes.edit', $note) }}" 
+                                           class="inline-flex items-center px-3 py-1 bg-yellow-500 text-white text-sm font-medium rounded hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-yellow-500">
+                                            <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                                            </svg>
+                                            Edit
+>>>>>>> 72266bf (corrected errors)
                                         </a>
                                         <form action="{{ route('notes.destroy', $note) }}" method="POST" class="inline">
                                             @csrf
                                             @method('DELETE')
                                             <button type="submit" 
+<<<<<<< HEAD
                                                     class="text-red-600 hover:text-red-900 dark:text-red-400 dark:hover:text-red-300" 
                                                     onclick="return confirm('Are you sure you want to delete this note?')"
                                                     aria-label="Delete note">
@@ -114,17 +148,37 @@
                             </div>
                         @empty
                             <p class="text-gray-500 dark:text-gray-400">No notes yet. Create your first note above!</p>
+=======
+                                                    class="inline-flex items-center px-3 py-1 bg-red-500 text-white text-sm font-medium rounded hover:bg-red-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+                                                    onclick="return confirm('Are you sure you want to delete this note?')">
+                                                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                                                </svg>
+                                                Delete
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        @empty
+                            <p class="text-gray-500 dark:text-gray-400">No notes yet. Create one above!</p>
+>>>>>>> 72266bf (corrected errors)
                         @endforelse
                     </div>
                 </div>
             </div>
 
+<<<<<<< HEAD
             <!-- Shared Notes List -->
+=======
+            <!-- Shared Notes -->
+>>>>>>> 72266bf (corrected errors)
             <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mt-6">
                 <div class="p-6">
                     <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100 mb-4">Shared With Me</h3>
                     <div class="space-y-4">
                         @forelse($sharedNotes as $note)
+<<<<<<< HEAD
                             <div class="border border-gray-200 dark:border-gray-700 rounded-lg p-4">
                                 <div class="flex justify-between items-start">
                                     <div>
@@ -135,6 +189,16 @@
                                 </div>
                                 <div class="mt-2 text-xs text-gray-500 dark:text-gray-400">
                                     Created: {{ $note->created_at->diffForHumans() }}
+=======
+                            <div class="p-4 bg-gray-50 dark:bg-gray-700 rounded-lg shadow">
+                                <div>
+                                    <h4 class="text-lg font-medium text-gray-900 dark:text-gray-100">{{ $note->title }}</h4>
+                                    <p class="mt-1 text-gray-600 dark:text-gray-400 whitespace-pre-line">{{ $note->content }}</p>
+                                    <p class="mt-2 text-sm text-gray-500 dark:text-gray-500">
+                                        Shared by: {{ $note->user->name }} | 
+                                        Created: {{ $note->created_at->format('M d, Y H:i') }}
+                                    </p>
+>>>>>>> 72266bf (corrected errors)
                                 </div>
                             </div>
                         @empty
@@ -153,14 +217,20 @@
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
                         <h3 class="text-lg font-medium text-gray-900 dark:text-gray-100">Share Note</h3>
+<<<<<<< HEAD
                         <button type="button" 
                                 onclick="closeModal()" 
                                 class="text-gray-400 hover:text-gray-500">
                             <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+=======
+                        <button onclick="closeShareModal()" class="text-gray-400 hover:text-gray-500">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+>>>>>>> 72266bf (corrected errors)
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
                     </div>
+<<<<<<< HEAD
                     <form id="shareForm" method="POST">
                         @csrf
                         <input type="hidden" id="noteIdToShare" name="note_id" value="">
@@ -196,6 +266,24 @@
                             <button type="submit" 
                                     class="px-4 py-2 bg-green-600 text-white rounded-md hover:bg-green-700">
                                 Share
+=======
+                    <form id="shareForm" method="POST" class="space-y-4">
+                        @csrf
+                        <div>
+                            <label for="users" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Select Users to Share With</label>
+                            <select name="shared_with[]" id="users" multiple class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                                @foreach(\App\Models\User::where('id', '!=', auth()->id())->get() as $user)
+                                    <option value="{{ $user->id }}">{{ $user->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex justify-end space-x-3">
+                            <button type="button" onclick="closeShareModal()" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 hover:bg-gray-200 rounded-md">
+                                Cancel
+                            </button>
+                            <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-md">
+                                Share Note
+>>>>>>> 72266bf (corrected errors)
                             </button>
                         </div>
                     </form>
@@ -204,6 +292,7 @@
         </div>
     </div>
 
+<<<<<<< HEAD
     @push('scripts')
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -313,4 +402,26 @@
         }
     </script>
     @endpush
+=======
+    <script>
+        function openShareModal(noteId) {
+            const modal = document.getElementById('shareModal');
+            const form = document.getElementById('shareForm');
+            form.action = `/notes/${noteId}/share`;
+            modal.classList.remove('hidden');
+        }
+
+        function closeShareModal() {
+            const modal = document.getElementById('shareModal');
+            modal.classList.add('hidden');
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('shareModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeShareModal();
+            }
+        });
+    </script>
+>>>>>>> 72266bf (corrected errors)
 </x-app-layout>
