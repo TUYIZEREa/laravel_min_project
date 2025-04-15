@@ -5,10 +5,6 @@ use App\Http\Controllers\NoteController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-<<<<<<< HEAD
-    return view('welcome');
-});
-
 =======
     return view('auth.login');
 });
